@@ -84,6 +84,13 @@ Senzori si periferice
 
 **Durata estimata cu baterie 500mAh:**
 
+- Utilizare medie: ~15-20 ore
+- Standby (deep sleep): pana la cateva saptamani
+
+---
+
+## Informatii suplimentare
+
 ### Structura hardware
 - Utilizare medie: ~15-20 ore
 - Standby (deep sleep): pana la cateva saptamani
