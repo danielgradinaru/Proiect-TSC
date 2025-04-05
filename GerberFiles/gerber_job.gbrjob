@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2025-04-05T18:05:49Z",
+        "GenerationSoftware": {
+            "Application": "Fusion Electronics",
+            "Vendor": "Autodesk",
+            "Version": "9.7.0"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.67,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "Proiect-TSC v20"
+        },
+        "Owner": "Daniel Gradinaru <gradinaru.daniel@ymail.com>",
+        "Size": {
+            "X": 170.192,
+            "Y": 111.2
+        }
+    }
+}
