@@ -110,4 +110,6 @@ Senzori si periferice
 - eBook Reader offline
 - Afisaj pentru date locale (calendar, vreme)
 
-[Untitled spreadsheet.xlsx](https://github.com/user-attachments/files/19620850/Untitled.spreadsheet.xlsx)
+Bill of Materials
+
+[Bill of Materials.xlsx](https://github.com/user-attachments/files/19621827/Bill.of.Materials.xlsx)
