@@ -2,58 +2,90 @@
 ![Diagram](https://github.com/user-attachments/assets/a279c5c8-ad81-4aaf-95b0-fadf8f1237b3)
 Proiect hardware complet pentru un eBook Reader portabil, cu consum redus de energie, afisaj E-Paper si conectivitate moderna, proiectat in jurul microcontrollerului ESP32-C6-WROOM-1-N8.
 
-Arhitectura hardware
-Microcontroller
-ESP32-C6-WROOM-1-N8
--RISC-V core, Wi-Fi 6, Bluetooth 5, criptografie hardware (informatii preluate din https://www.espressif.com/en/products/modules/esp32-c6)
--Memorie Flash externa de 64MB (W25Q512JVEIQ) – conectata prin SPI.
--Conexiuni I2C, SPI si GPIO dedicate componentelor externe.
+# Arhitectura Hardware
 
-Alimentare
--USB-C (PMF0501)
---Intrare de 5V din surse standard.
--Protectie ESD (USBLC6-2SC6Y)
---Protectie bidirectionala pentru liniile USB.
--Incarcator Li-Po (MCP73831)
---Circuit simplu de incarcare pentru o celula Li-Po (max 500mA).
--Baterie Li-Po 3.7V
--Regulator LDO 3.3V (MCP1700-3302E)
---Regleaza tensiunea la 3.3V pentru a alimenta majoritatea componentelor.
+## Microcontroller
 
-Afisaj E-Ink
--Header pentru E-Ink Display (MP1)
---Compatibil cu ecrane E-Paper de 1.54", 200x200px.
--Circuit de putere pentru afisaj:
---Include Q3 (transistor), L1 (inductor), D2 (dioda) – pentru generarea tensiunii specifice EPD.
--Selector de tip display (SJ1)
---Jumpere pentru alegerea tipului de ecran.
-Interfata:
-SPI + GPIO control, conectat direct la ESP32-C6.
+### ESP32-C6-WROOM-1-N8
+- Core RISC-V
+- Conectivitate: Wi-Fi 6, Bluetooth 5
+- Criptografie hardware
+- [Specificații oficiale](https://www.espressif.com/en/products/modules/esp32-c6)
 
-Memorie externa
--SD Card (U4)
---Stocare pentru fisierele eBook. Conectat prin SPI.
--64MB NOR Flash (W25Q512JVEIQ)
---Memorie extinsa pentru firmware, fonturi, imagini. Conectat pe bus SPI dedicat.
+### Memorie Flash externă
+- **W25Q512JVEIQ** – 64MB, conectată prin SPI
 
-Senzori si periferice
--BME688
-*Senzor de temperatura, umiditate, presiune si compusi volatili (VOCs).
-*Comunicatie: I2C
+### Interfețe disponibile
+- I2C, SPI și GPIO dedicate componentelor externe
 
--RTC – DS3231SN
-*Modul de timp real de inalta precizie.
-*Comunicatie: I2C
+---
 
--MAX17048G-T10
-*Fuel gauge pentru monitorizarea nivelului bateriei.
-*Comunicatie: I2C
+## Alimentare
 
--Butoane (BD5229)
-*Reset si Boot, conectate pe pini GPIO configurabili.
+### USB-C (PMF0501)
+- Intrare de 5V din surse standard
 
--Qwiic / Stemma QT (J5)
-*Conector pentru extensii rapide I2C.
+### Protecție ESD (USBLC6-2SC6Y)
+- Protecție bidirecțională pentru liniile USB
+
+### Încărcător Li-Po (MCP73831)
+- Circuit simplu de încărcare pentru o celulă Li-Po (max. 500mA)
+
+### Baterie
+- Li-Po 3.7V
+
+### Regulator LDO (MCP1700-3302E)
+- Reglează tensiunea la 3.3V pentru alimentarea majorității componentelor
+
+---
+
+## Afișaj E-Ink
+
+### Conector MP1
+- Compatibil cu ecrane E-Ink de 1.54", 200x200px
+
+### Circuit de alimentare pentru afișaj
+- Componente: Q3 (tranzistor), L1 (inductor), D2 (diodă)
+- Rol: generare tensiune specifică pentru EPD
+
+### Selector tip display (SJ1)
+- Jumpere pentru alegerea tipului de ecran
+
+### Interfață
+- SPI + GPIO, conectat direct la ESP32-C6
+
+---
+
+## Memorie Externă
+
+- **Card SD (U4)** – pentru stocarea fișierelor eBook (conectat prin SPI)
+- **64MB NOR Flash (W25Q512JVEIQ)** – memorie extinsă pentru firmware, fonturi, imagini (conectată pe SPI dedicat)
+
+---
+
+## Senzori și Periferice
+
+### BME688
+- Senzor pentru temperatură, umiditate, presiune și compuși volatili (VOCs)
+- Comunicație: I2C
+
+### RTC – DS3231SN
+- Modul de timp real de înaltă precizie
+- Comunicație: I2C
+
+### MAX17048G-T10
+- Fuel gauge pentru monitorizarea nivelului bateriei
+- Comunicație: I2C
+
+### Butoane (BD5229)
+- Butoane Reset și Boot
+- Conectate pe pini GPIO configurabili
+
+### Qwiic / Stemma QT (J5)
+- Conector pentru extensii rapide I2C
+
+---
+
 
 ## Conexiuni ESP32-C6 (pini utilizati)
 
