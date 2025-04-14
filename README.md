@@ -134,7 +134,7 @@ Proiect hardware complet pentru un eBook Reader portabil, cu consum redus de ene
 ### Randari 3D si carcasa
 
 - Randari disponibile cu componentele plasate
-- Proiect finalizat atat din punct de vedere al crcasei 3D cat si al PCB
+- Proiect finalizat atat din punct de vedere al carcasei 3D cat si al PCB
 - Dimensiuni compacte si aspect ergonomic
 
 ## Aplicatii posibile
